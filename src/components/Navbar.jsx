@@ -48,7 +48,7 @@ export const Navbar = () => {
           >
             <div
               style={{
-                width: 30, height: 30,
+                width: 60, height: 60,
                 background: '#111',
                 borderRadius: '50%',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -57,7 +57,7 @@ export const Navbar = () => {
               }}
               className="group-hover:scale-105"
             >
-              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+              <svg width="28" height="28" viewBox="0 0 20 20" fill="none">
                 <circle cx="10" cy="10" r="9" stroke="#fff" strokeWidth="1.5"/>
                 <path d="M10 5v10M5 10h10" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
