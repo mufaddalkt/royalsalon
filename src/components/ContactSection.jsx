@@ -24,7 +24,7 @@ export const ContactSection = () => {
         >
 
           {/* Left — Info */}
-          <div>
+          <div className="reveal">
             <span className="eyebrow">Get in Touch</span>
             <h2
               style={{
@@ -98,7 +98,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Right — Contact Form */}
-          <div>
+          <div className="reveal delay-1">
             <div style={{ background: '#fff', borderRadius: 24, padding: '40px 36px', border: '1px solid #E8E8E5', boxShadow: '0 4px 24px rgba(0,0,0,0.05)' }}>
               <h3
                 style={{

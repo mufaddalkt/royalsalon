@@ -50,6 +50,24 @@ const BookingOverlay = () => {
 const MainContent = () => {
   const { activeTab, toasts, removeToast } = useSalon();
 
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    // Allow a tick for elements to render
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }, 100);
+
+    return () => observer.disconnect();
+  }, [activeTab]);
+
   return (
     <main>
       {/* Toast Notifications */}

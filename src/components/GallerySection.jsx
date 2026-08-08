@@ -28,7 +28,7 @@ export const GallerySection = () => {
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
 
         {/* Heading */}
-        <div style={{ marginBottom: 56, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
+        <div style={{ marginBottom: 56, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }} className="reveal">
           <div>
             <span className="eyebrow">Gallery</span>
             <h2
@@ -73,10 +73,11 @@ export const GallerySection = () => {
           }}
           className="gallery-grid"
         >
-          {shown.map(item => (
+          {shown.map((item, i) => (
             <div
               key={item.id}
               onClick={() => setLightbox(item)}
+              className={`reveal delay-${(i % 3) + 1}`}
               onMouseEnter={() => setHovered(item.id)}
               onMouseLeave={() => setHovered(null)}
               style={{

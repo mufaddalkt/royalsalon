@@ -32,7 +32,7 @@ export const Testimonials = () => {
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
 
         {/* Heading */}
-        <div style={{ marginBottom: 64, maxWidth: 500 }}>
+        <div style={{ marginBottom: 64, maxWidth: 500 }} className="reveal">
           <span className="eyebrow">Client Stories</span>
           <h2
             style={{
@@ -54,7 +54,7 @@ export const Testimonials = () => {
           {reviews.map((r, i) => (
             <div
               key={i}
-              className="card"
+              className={`card reveal delay-${i + 1}`}
               style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 20, borderRadius: 20 }}
             >
               {/* Stars */}
@@ -99,7 +99,7 @@ export const Testimonials = () => {
             gap: 24,
             flexWrap: 'wrap',
           }}
-          className="cta-strip"
+          className="cta-strip reveal delay-1"
         >
           <div>
             <h3

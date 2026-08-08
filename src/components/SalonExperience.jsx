@@ -13,7 +13,7 @@ export const SalonExperience = () => {
         style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}
       >
         {/* Large editorial heading */}
-        <div style={{ marginBottom: 80 }}>
+        <div style={{ marginBottom: 80 }} className="reveal">
           <span className="eyebrow">Our Philosophy</span>
           <h2
             style={{
@@ -43,6 +43,7 @@ export const SalonExperience = () => {
         >
           {/* Left: large photo */}
           <div
+            className="reveal delay-1"
             style={{
               borderRadius: 24,
               overflow: 'hidden',
@@ -81,7 +82,7 @@ export const SalonExperience = () => {
           </div>
 
           {/* Right: content */}
-          <div style={{ paddingLeft: 16 }}>
+          <div style={{ paddingLeft: 16 }} className="reveal delay-2">
             <p style={{ fontSize: 16, color: '#6B6B6B', lineHeight: 1.8, marginBottom: 48 }}>
               We believe great beauty isn't about trends — it's about you. Every visit to Royal Salon begins with listening: to your lifestyle, your preferences, your vision. From there, our specialists craft an experience that's entirely yours.
             </p>

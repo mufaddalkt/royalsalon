@@ -41,7 +41,7 @@ export const WhyChooseUs = () => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'flex-start' }} className="why-grid">
 
           {/* Left: sticky heading */}
-          <div style={{ position: 'sticky', top: 120 }}>
+          <div style={{ position: 'sticky', top: 120 }} className="reveal">
             <span className="eyebrow">Why Royal Salon</span>
             <h2
               style={{
@@ -71,6 +71,7 @@ export const WhyChooseUs = () => {
             {pillars.map((p, i) => (
               <div
                 key={p.title}
+                className={`reveal delay-${(i % 3) + 1}`}
                 style={{
                   display: 'flex', gap: 20, padding: '28px 0',
                   borderBottom: i < pillars.length - 1 ? '1px solid #F0F0ED' : 'none',

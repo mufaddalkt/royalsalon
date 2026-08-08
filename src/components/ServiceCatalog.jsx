@@ -42,7 +42,7 @@ export const ServiceCatalog = () => {
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
 
         {/* Section heading */}
-        <div style={{ marginBottom: 64 }}>
+        <div style={{ marginBottom: 64 }} className="reveal">
           <span className="eyebrow">Our Services</span>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
             <h2
@@ -79,7 +79,7 @@ export const ServiceCatalog = () => {
         </div>
 
         {/* Category filters */}
-        <div style={{ display: 'flex', gap: 8, overflowX: 'auto', marginBottom: 52, paddingBottom: 4 }} className="no-scrollbar">
+        <div style={{ display: 'flex', gap: 8, overflowX: 'auto', marginBottom: 52, paddingBottom: 4 }} className="no-scrollbar reveal delay-1">
           {cats.map(c => (
             <button
               key={c}
@@ -123,7 +123,7 @@ export const ServiceCatalog = () => {
               return (
                 <article
                   key={srv.id}
-                  className="card card-hover"
+                  className={`card card-hover reveal ${i % 2 === 0 ? 'delay-2' : 'delay-3'}`}
                   style={{
                     overflow: 'hidden',
                     cursor: 'pointer',
